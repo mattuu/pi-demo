@@ -41,3 +41,11 @@ steps:
     arguments: '-c release'
     zipAfterPublish: true
 
+- task: AzureRmWebAppDeployment@4
+  inputs:
+    ConnectionType: 'AzureRM'
+    azureSubscription: 'Pay-As-You-Go (aa321efd-421b-4c16-a903-09e293d13eb2)'
+    appType: 'webApp'
+    WebAppName: 'matts-pi-demo'
+    packageForLinux: '$(System.DefaultWorkingDirectory)/**/*.zip'
+
