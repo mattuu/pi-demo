@@ -39,3 +39,5 @@ steps:
     command: 'publish'
     publishWebProjects: true
     arguments: '-c release'
+    zipAfterPublish: true
+
